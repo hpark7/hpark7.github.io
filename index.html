@@ -20,11 +20,10 @@
             color: #333;
         }
 
-  
         /* CSS Grid Layout for the main container */
         .container {
             display: grid;
-            grid-template-columns: 300px 1fr; /* Increase the TOC to 300px (from 250px) */
+            grid-template-columns: 300px 1fr; /* TOC width */
             height: 100vh; /* Full height of the viewport */
             background-color: #fff;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -32,46 +31,41 @@
             overflow: hidden;
         }
 
-
         /* Style for the TOC (left side) */
-       /* Style for the TOC (left side) */
-.toc {
-    background-color: #add8e6; /* Light blue background */
-    padding: 20px;
-    color: white;
-    overflow-y: auto; /* Scrollable if TOC is too long */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Optional: shadow to make it pop */
-    border-right: 1px solid #ddd; /* Optional: border to separate TOC and content */
-}
+        .toc {
+            background-color: #fff; /* Neutral white background */
+            padding: 20px;
+            color: #333; /* Neutral dark text */
+            overflow-y: auto; /* Scrollable if TOC is too long */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Optional: shadow to make it pop */
+            border-right: 1px solid #ddd; /* Subtle border */
+        }
 
         .toc h2 {
             font-size: 2.0rem;
             margin-bottom: 1rem;
+            color: #333; /* Neutral color */
         }
 
-         /* TOC Links */
-.toc a {
-    text-decoration: none;
-    color: white;
-    display: block;
-    margin: 10px 0;
-    font-size: 1rem;
-    padding: 10px 15px; /* Adds space around the text */
-    background-color: #004d99; /* Button-like background */
-    border-radius: 5px; /* Rounded corners */
-    transition: all 0.3s ease; /* Smooth transition for hover effects */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Soft shadow */
-    font-weight: 500; /* Slightly bolder text */
-}
+        /* TOC Links */
+        .toc a {
+            text-decoration: none;
+            color: #2156a5; /* Neutral dark color for links */
+            display: block;
+            margin: 10px 0;
+            font-size: 1rem;
+            padding: 10px 15px; /* Adds space around the text */
+            background: none; /* No background */
+            border-radius: 5px; /* Rounded corners */
+            transition: all 0.3s ease; /* Smooth transition for hover effects */
+        }
 
-/* Hover state with color change and background effect */
-.toc a:hover {
-    color: #004d99; /* Text color change */
-    background-color: #ffcc00; /* Background color on hover */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
-    transform: translateY(-3px); /* Slightly lift the link when hovered */
-}
-
+        /* Hover state with subtle effects */
+        .toc a:hover {
+            color: #004d99; /* Slight text color change on hover */
+            text-decoration: underline; /* Underline effect */
+            background: none; /* No background on hover */
+        }
 
         /* Style for the Main Content (right side) */
         .main-content {
@@ -116,47 +110,44 @@
             background-color: #ff9900;
         }
 
- 
- /* Container for the cover image */
-.cover {
-    position: relative; /* Necessary for the overlay and text positioning */
-    width: 100%; /* Full width of the container */
-    height: auto; /* Height adjusts to image size */
-    overflow: hidden; /* Ensures content doesn't overflow */
-}
+        /* Container for the cover image */
+        .cover {
+            position: relative; /* Necessary for the overlay and text positioning */
+            width: 100%; /* Full width of the container */
+            height: auto; /* Height adjusts to image size */
+            overflow: hidden; /* Ensures content doesn't overflow */
+        }
 
-/* Cover image */
-.cover img.cover-image {
-    width: 100%; /* Full width, no padding or margins */
-    height: auto; /* Maintains aspect ratio */
-    display: block;
-}
+        /* Cover image */
+        .cover img.cover-image {
+            width: 100%; /* Full width, no padding or margins */
+            height: auto; /* Maintains aspect ratio */
+            display: block;
+        }
 
-/* Overlay effect (darkening with dim ratio) */
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* 50% dark overlay */
-    z-index: 1; /* Layer it above the image */
-}
+        /* Overlay effect (darkening with dim ratio) */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* 50% dark overlay */
+            z-index: 1; /* Layer it above the image */
+        }
 
-/* Text on top of the image */
-.cover-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2; /* Ensures text is above the overlay */
-    color: white;
-    font-size: 2rem;
-    text-align: center;
-    font-weight: bold;
-}
-
-
+        /* Text on top of the image */
+        .cover-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2; /* Ensures text is above the overlay */
+            color: white;
+            font-size: 2rem;
+            text-align: center;
+            font-weight: bold;
+        }
 
         .cover h2 {
             font-size: 2rem;
@@ -242,16 +233,14 @@
                 </a>
             </div>
 
-             <div class="cover">
+            <div class="cover">
                 <div class="overlay"></div>
-                <img src="cover3.png?w=947" alt="Cover Image" class="cover-image">
+                <img src="https://ggcwit.wordpress.com/wp-content/uploads/2024/09/cover2.png?w=947" alt="Cover Image" class="cover-image">
                 <div class="cover-text">
                     <p><strong>EMPOWERING WOMEN</strong></p>
-                     <p><strong>IN TECHNOLOGY</strong></p>
+                    <p><strong>IN TECHNOLOGY</strong></p>
                 </div>
             </div>
-
-
 
             <p><strong>Women in Technology Java Programming Boot Camp will be held in-person from:</strong></p>
             <p><strong>THURSDAY, 2 JANUARY, 2025 - SATURDAY, 4 JANUARY, 2025.</strong></p>
