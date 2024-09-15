@@ -4,52 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Table of Contents and Main Page</title>
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        /* CSS Grid Layout */
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        /* CSS Grid Layout for the main container */
         .container {
             display: grid;
             grid-template-columns: 250px 1fr; /* TOC 250px wide, main content takes the rest */
             height: 100vh; /* Full height of the viewport */
+            background-color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
         }
 
         /* Style for the TOC (left side) */
         .toc {
-            background-color: #f4f4f4;
+            background-color: #004d99;
             padding: 20px;
-            border-right: 1px solid #ccc;
+            color: white;
             overflow-y: auto; /* Scrollable if TOC is too long */
+        }
+
+        .toc h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* TOC Links */
+        .toc a {
+            text-decoration: none;
+            color: white;
+            display: block;
+            margin: 10px 0;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .toc a:hover {
+            color: #ffcc00;
         }
 
         /* Style for the Main Content (right side) */
         .main-content {
             padding: 20px;
+            background-color: #fafafa;
+            overflow-y: auto;
         }
 
-        /* Make TOC links look nice */
-        .toc a {
-            text-decoration: none;
-            color: #333;
-            display: block;
-            margin: 10px 0;
+        /* Main Content Typography */
+        h1, h2 {
+            color: #004d99;
+            margin-bottom: 15px;
         }
 
-        .toc a:hover {
-            color: #007bff;
+        p, ul {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        ul ul li {
+            margin-bottom: 0;
+            margin-left: 20px;
         }
 
         /* Button styling */
         .button {
             display: inline-block;
-            background-color: #007BFF;
-            color: white;
+            background-color: #ffcc00;
+            color: #004d99;
             padding: 10px 20px;
             text-align: center;
             text-decoration: none;
             border-radius: 5px;
+            transition: background-color 0.3s;
         }
 
         .button:hover {
-            background-color: #0056b3;
+            background-color: #ff9900;
         }
 
         /* Cover section */
@@ -57,9 +106,16 @@
             background-image: url('cover2.png');
             background-size: cover;
             background-position: center;
-            padding: 100px 0;
+            padding: 80px 20px;
             text-align: center;
             color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+
+        .cover h2 {
+            font-size: 2rem;
         }
 
         /* Table styling */
@@ -67,25 +123,48 @@
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         table, th, td {
-            border: 1px solid black;
+            border: 1px solid #ddd;
         }
 
         th, td {
-            padding: 10px;
+            padding: 12px;
             text-align: left;
+        }
+
+        th {
+            background-color: #004d99;
+            color: white;
         }
 
         /* Image size */
         .small-logo {
             width: 150px; /* Adjust width as needed */
             height: auto; /* Ensures aspect ratio is maintained */
+            margin: 20px 0;
         }
 
+        /* Centering elements */
         .center {
             text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr; /* Stack TOC and content on smaller screens */
+            }
+
+            .toc {
+                border-bottom: 1px solid #ddd;
+                border-right: none;
+            }
         }
     </style>
 </head>
@@ -94,27 +173,29 @@
     <div class="container">
         <!-- Table of Contents Section -->
         <div class="toc">
-            <h2>Table of Contents</h2>
-            <a href="#bootcamp1">Winter 2025 Boot Camp (1): Boot Camp 1</a>
-            <a href="#bootcamp2">Summer 2025 Boot Camp (2) : Boot Camp 2</a>
-            <a href="#bootcamp3">Summer 2025 Boot Camp (3) : Boot Camp 3</a>
-            <a href="#bootcamp4">Fall 2025 Boot Camp (4) : Boot Camp 4</a>
-            <a href="#bootcamp5">Fall 2025 Boot Camp (5) : Boot Camp 5</a>
-            <a href="#bootcamp6">Winter 2026 Boot Camp (6) : Boot Camp 6</a>
-            <a href="#bootcamp7">Spring 2026 Boot Camp (7) : Boot Camp 7</a>
-            <a href="#bootcamp8">Spring 2026 Boot Camp (8) : Boot Camp 8</a>
-            <a href="#bootcamp9">Summer 2026 Boot Camp (9) : Boot Camp 9</a>
-            <a href="#bootcamp10">Summer 2026 Boot Camp (10) : Boot Camp 10</a>
+            <h2><i class="fa fa-list-ul"></i> Table of Contents</h2>
+            <a href="#bootcamp1"><i class="fa fa-calendar"></i> Winter 2025 Boot Camp (1)</a>
+            <a href="#bootcamp2"><i class="fa fa-calendar"></i> Summer 2025 Boot Camp (2)</a>
+            <a href="#bootcamp3"><i class="fa fa-calendar"></i> Summer 2025 Boot Camp (3)</a>
+            <a href="#bootcamp4"><i class="fa fa-calendar"></i> Fall 2025 Boot Camp (4)</a>
+            <a href="#bootcamp5"><i class="fa fa-calendar"></i> Fall 2025 Boot Camp (5)</a>
+            <a href="#bootcamp6"><i class="fa fa-calendar"></i> Winter 2026 Boot Camp (6)</a>
+            <a href="#bootcamp7"><i class="fa fa-calendar"></i> Spring 2026 Boot Camp (7)</a>
+            <a href="#bootcamp8"><i class="fa fa-calendar"></i> Spring 2026 Boot Camp (8)</a>
+            <a href="#bootcamp9"><i class="fa fa-calendar"></i> Summer 2026 Boot Camp (9)</a>
+            <a href="#bootcamp10"><i class="fa fa-calendar"></i> Summer 2026 Boot Camp (10)</a>
         </div>
 
         <!-- Main Content Section -->
         <div class="main-content">
-            <h1 id="bootcamp1">Winter 2025 Boot Camp (1)</h1>
+            <h1 id="bootcamp1"><i class="fa fa-info-circle"></i> Winter 2025 Boot Camp (1)</h1>
             <p><strong>Empowering Women in Technology</strong><br>
             <strong>Department of Information Technology<br>School of Science and Technology<br>Georgia Gwinnett College</strong></p>
 
             <div class="center">
-                <a class="button" href="https://forms.gle/8YHaB5Diz5PL7Q1j7" target="_blank">Apply Here</a>
+                <a class="button" href="https://forms.gle/8YHaB5Diz5PL7Q1j7" target="_blank">
+                    <i class="fa fa-pencil"></i> Apply Here
+                </a>
             </div>
 
             <div class="cover">
@@ -223,7 +304,9 @@
             <p>Registration Fee for non-GGC students: <strong>$25.00</strong>. Students who complete the program will receive a certificate and prize. Payment details will be emailed upon acceptance into the program. Ready to apply?</p>
 
             <div class="center">
-                <a class="button" href="https://forms.gle/8YHaB5Diz5PL7Q1j7" target="_blank">Apply Here</a>
+                <a class="button" href="https://forms.gle/8YHaB5Diz5PL7Q1j7" target="_blank">
+                    <i class="fa fa-pencil"></i> Apply Here
+                </a>
             </div>
 
             <h2 class="center">Thank you to our Sponsors</h2>
