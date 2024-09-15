@@ -3,11 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empowering Women in Technology</title>
+    <title>Table of Contents and Main Page</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* CSS Grid Layout */
+        .container {
+            display: grid;
+            grid-template-columns: 250px 1fr; /* TOC 250px wide, main content takes the rest */
+            height: 100vh; /* Full height of the viewport */
         }
+
+        /* Style for the TOC (left side) */
+        .toc {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-right: 1px solid #ccc;
+            overflow-y: auto; /* Scrollable if TOC is too long */
+        }
+
+        /* Style for the Main Content (right side) */
+        .main-content {
+            padding: 20px;
+        }
+
+        /* Make TOC links look nice */
+        .toc a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+            margin: 10px 0;
+        }
+
+        .toc a:hover {
+            color: #007bff;
+        }
+
+        /* Button styling */
         .button {
             display: inline-block;
             background-color: #007BFF;
@@ -17,9 +47,12 @@
             text-decoration: none;
             border-radius: 5px;
         }
+
         .button:hover {
             background-color: #0056b3;
         }
+
+        /* Cover section */
         .cover {
             background-image: url('cover2.png');
             background-size: cover;
@@ -28,155 +61,180 @@
             text-align: center;
             color: white;
         }
-        .center {
-            text-align: center;
-        }
+
+        /* Table styling */
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
         }
+
         table, th, td {
             border: 1px solid black;
         }
+
         th, td {
             padding: 10px;
             text-align: left;
         }
 
+        /* Image size */
         .small-logo {
-  width: 150px; /* Adjust width as needed */
-  height: auto; /* Ensures aspect ratio is maintained */
-}
+            width: 150px; /* Adjust width as needed */
+            height: auto; /* Ensures aspect ratio is maintained */
+        }
 
+        .center {
+            text-align: center;
+        }
     </style>
 </head>
 <body>
 
-    <p><strong>Empowering Women in Technology</strong><br>
-    <strong>Department of Information Technology<br>School of Science and Technology<br>Georgia Gwinnett College</strong></p>
+    <div class="container">
+        <!-- Table of Contents Section -->
+        <div class="toc">
+            <h2>Table of Contents</h2>
+            <a href="#bootcamp1">Winter 2025 Boot Camp (1): Boot Camp 1</a>
+            <a href="#bootcamp2">Summer 2025 Boot Camp (2) : Boot Camp 2</a>
+            <a href="#bootcamp3">Summer 2025 Boot Camp (3) : Boot Camp 3</a>
+            <a href="#bootcamp4">Fall 2025 Boot Camp (4) : Boot Camp 4</a>
+            <a href="#bootcamp5">Fall 2025 Boot Camp (5) : Boot Camp 5</a>
+            <a href="#bootcamp6">Winter 2026 Boot Camp (6) : Boot Camp 6</a>
+            <a href="#bootcamp7">Spring 2026 Boot Camp (7) : Boot Camp 7</a>
+            <a href="#bootcamp8">Spring 2026 Boot Camp (8) : Boot Camp 8</a>
+            <a href="#bootcamp9">Summer 2026 Boot Camp (9) : Boot Camp 9</a>
+            <a href="#bootcamp10">Summer 2026 Boot Camp (10) : Boot Camp 10</a>
+        </div>
 
-    <div class="center">
-        <a class="button" href="https://forms.gle/8YHaB5Diz5PL7Q1j7" target="_blank">Apply Here</a>
-    </div>
+        <!-- Main Content Section -->
+        <div class="main-content">
+            <h1 id="bootcamp1">Winter 2025 Boot Camp (1)</h1>
+            <p><strong>Empowering Women in Technology</strong><br>
+            <strong>Department of Information Technology<br>School of Science and Technology<br>Georgia Gwinnett College</strong></p>
 
-    <div class="cover">
-        <h2>EMPOWERING WOMEN</h2>
-        <h2>IN TECHNOLOGY</h2>
-    </div>
+            <div class="center">
+                <a class="button" href="https://forms.gle/8YHaB5Diz5PL7Q1j7" target="_blank">Apply Here</a>
+            </div>
 
-    <p><strong>Women in Technology Java Programming Boot Camp will be held in-person from:</strong></p>
-    <p><strong>THURSDAY, 2 JANUARY, 2025 - SATURDAY, 4 JANUARY, 2025.</strong></p>
+            <div class="cover">
+                <h2>EMPOWERING WOMEN</h2>
+                <h2>IN TECHNOLOGY</h2>
+            </div>
 
-    <p><strong>The purpose of this boot camp is to:</strong></p>
-    <ul>
-        <li>Prepare students to succeed in Java Programming courses
+            <p><strong>Women in Technology Java Programming Boot Camp will be held in-person from:</strong></p>
+            <p><strong>THURSDAY, 2 JANUARY, 2025 - SATURDAY, 4 JANUARY, 2025.</strong></p>
+
+            <p><strong>The purpose of this boot camp is to:</strong></p>
             <ul>
-                <li>Group for beginners who have never taken programming</li>
-                <li>Group for students who have been exposed to Java and want a refresher to prepare for other IT classes</li>
+                <li>Prepare students to succeed in Java Programming courses
+                    <ul>
+                        <li>Group for beginners who have never taken programming</li>
+                        <li>Group for students who have been exposed to Java and want a refresher to prepare for other IT classes</li>
+                    </ul>
+                </li>
+                <li>Enable women in IT to form a community of support with peers, student mentors, and IT faculty</li>
+                <li>Provide professional development opportunities such as guest speakers and off-campus field trips</li>
             </ul>
-        </li>
-        <li>Enable women in IT to form a community of support with peers, student mentors, and IT faculty</li>
-        <li>Provide professional development opportunities such as guest speakers and off-campus field trips</li>
-    </ul>
 
-    <div class="center">
-        <p>The time will be used for programming labs, Tech Talks, peer mentoring sessions, and plenty of breaks. Participants will work on a project and can expect assistance from instructors and student mentors.</p>
-        <p>Click <a href="https://drive.google.com/file/d/1qlDeXEId2BJFrURo6Pa-j5GBZBGyMZUm/view" target="_blank"><b>here</b></a> to listen to what our boot camp alumni have to say about the boot camp.</p>
-        <strong><span style="color:#ff0000">Tentative</span> Schedule of WIT WINTER Boot Camp 2025</strong>
-    </div>
+            <div class="center">
+                <p>The time will be used for programming labs, Tech Talks, peer mentoring sessions, and plenty of breaks. Participants will work on a project and can expect assistance from instructors and student mentors.</p>
+                <p>Click <a href="https://drive.google.com/file/d/1qlDeXEId2BJFrURo6Pa-j5GBZBGyMZUm/view" target="_blank"><b>here</b></a> to listen to what our boot camp alumni have to say about the boot camp.</p>
+                <strong><span style="color:#ff0000">Tentative</span> Schedule of WIT WINTER Boot Camp 2025</strong>
+            </div>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Day</th>
-                <th>Time</th>
-                <th>Activity</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Friday, January 3, 2025</td>
-                <td>8:30 - 9 a.m.</td>
-                <td>Breakfast (TBA)</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>9 - 9:30 am</td>
-                <td>Pre-Test (TBA)</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>9:30 - 11:30 am</td>
-                <td>Programming 1 (TBA) - Dr. Sebastien Siva</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>11:45 am - 12:15 pm</td>
-                <td>Guest Speaker (Keynote) (TBA)</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>12:15 - 1:15 pm</td>
-                <td>Lunch</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>1:30 - 4:00 pm</td>
-                <td>Programming 2 (TBA) - Dr. Sebastien Siva</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>4:15-5:00 pm</td>
-                <td>Special Topic - Mini Session (TBA)</td>
-            </tr>
-            <tr>
-                <td>Saturday, January 4, 2025</td>
-                <td>8:30 - 9 a.m.</td>
-                <td>Breakfast (TBA)</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>9 - 11:30 am</td>
-                <td>Programming 3 (TBA) - Dr. Sebastien Siva</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>11:35 am - 1:00 pm</td>
-                <td>Guest Speakers and Lunch</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>1:15 - 3:30 pm</td>
-                <td>Programming 4 (TBA) - Dr. Sebastien Siva</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>3:30 - 4:15 pm</td>
-                <td>Post-Test and Post Survey (TBA)</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>4:30 - 5:00 pm</td>
-                <td>Closing Session with Certificate Presentation</td>
-            </tr>
-        </tbody>
-    </table>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Time</th>
+                        <th>Activity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Friday, January 3, 2025</td>
+                        <td>8:30 - 9 a.m.</td>
+                        <td>Breakfast (TBA)</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>9 - 9:30 am</td>
+                        <td>Pre-Test (TBA)</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>9:30 - 11:30 am</td>
+                        <td>Programming 1 (TBA) - Dr. Sebastien Siva</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>11:45 am - 12:15 pm</td>
+                        <td>Guest Speaker (Keynote) (TBA)</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>12:15 - 1:15 pm</td>
+                        <td>Lunch</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>1:30 - 4:00 pm</td>
+                        <td>Programming 2 (TBA) - Dr. Sebastien Siva</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>4:15-5:00 pm</td>
+                        <td>Special Topic - Mini Session (TBA)</td>
+                    </tr>
+                    <tr>
+                        <td>Saturday, January 4, 2025</td>
+                        <td>8:30 - 9 a.m.</td>
+                        <td>Breakfast (TBA)</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>9 - 11:30 am</td>
+                        <td>Programming 3 (TBA) - Dr. Sebastien Siva</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>11:35 am - 1:00 pm</td>
+                        <td>Guest Speakers and Lunch</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>1:15 - 3:30 pm</td>
+                        <td>Programming 4 (TBA) - Dr. Sebastien Siva</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>3:30 - 4:15 pm</td>
+                        <td>Post-Test and Post Survey (TBA)</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>4:30 - 5:00 pm</td>
+                        <td>Closing Session with Certificate Presentation</td>
+                    </tr>
+                </tbody>
+            </table>
 
-    <p>Registration Fee for non-GGC students: <strong>$25.00</strong>. Students who complete the program will receive a certificate and prize. Payment details will be emailed upon acceptance into the program. Ready to apply?</p>
+            <p>Registration Fee for non-GGC students: <strong>$25.00</strong>. Students who complete the program will receive a certificate and prize. Payment details will be emailed upon acceptance into the program. Ready to apply?</p>
 
-    <div class="center">
-        <a class="button" href="https://forms.gle/8YHaB5Diz5PL7Q1j7" target="_blank">Apply Here</a>
-    </div>
+            <div class="center">
+                <a class="button" href="https://forms.gle/8YHaB5Diz5PL7Q1j7" target="_blank">Apply Here</a>
+            </div>
 
-    <h2 class="center">Thank you to our Sponsors</h2>
+            <h2 class="center">Thank you to our Sponsors</h2>
 
-    <div class="center">
- <a href="https://ggcwit.files.wordpress.com/2023/03/cropped-schoolofscienceandtechnology-vert.png" target="_blank">
-  <img src="https://ggcwit.files.wordpress.com/2023/03/cropped-schoolofscienceandtechnology-vert.png?w=954" alt="School of Science and Technology Logo" class="small-logo" />
-</a>
+            <div class="center">
+                <a href="https://ggcwit.files.wordpress.com/2023/03/cropped-schoolofscienceandtechnology-vert.png" target="_blank">
+                    <img src="https://ggcwit.files.wordpress.com/2023/03/cropped-schoolofscienceandtechnology-vert.png?w=954" alt="School of Science and Technology Logo" class="small-logo" />
+                </a>
+            </div>
 
-
+        </div>
     </div>
 
 </body>
