@@ -116,21 +116,27 @@
             background-color: #ff9900;
         }
 
-        /* Cover section */
+/* Cover section with image */
 .cover {
-    background-image: url('cover2.png');
-    background-size: contain; /* cover2.png must not cropped - changed on 9.15.2024 */
-    background-repeat: no-repeat; /* Prevents tiling */
-    background-position: center; /* Center the image within the container */
-    height: 400px; /* Set a fixed height for the container */
+    position: relative; /* Allows for overlaying content on the image */
     text-align: center;
-    color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+}
+
+.cover-image {
+    width: 100%; /* Ensures the image takes up the full width of the container */
+    height: auto; /* Maintains the image's aspect ratio */
+    display: block; /* Ensures the image is displayed as a block-level element */
+}
+
+/* Optional overlay content */
+.overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2rem;
 }
 
 
@@ -220,9 +226,13 @@
             </div>
 
             <div class="cover">
-                <h2>EMPOWERING WOMEN</h2>
-                <h2>IN TECHNOLOGY</h2>
+                <img src="cover2.png" alt="Cover Image" class="cover-image">
+                <div class="overlay-content">
+                    <h2>EMPOWERING WOMEN</h2>
+                    <h2>IN TECHNOLOGY</h2>
+                </div>
             </div>
+
 
             <p><strong>Women in Technology Java Programming Boot Camp will be held in-person from:</strong></p>
             <p><strong>THURSDAY, 2 JANUARY, 2025 - SATURDAY, 4 JANUARY, 2025.</strong></p>
