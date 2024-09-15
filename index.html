@@ -40,23 +40,33 @@
         }
 
         .toc h2 {
-            font-size: 1.5rem;
+            font-size: 2.0rem;
             margin-bottom: 1rem;
         }
 
-        /* TOC Links */
-        .toc a {
-            text-decoration: none;
-            color: white;
-            display: block;
-            margin: 10px 0;
-            font-size: 1rem;
-            transition: color 0.3s;
-        }
+         /* TOC Links */
+.toc a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    margin: 10px 0;
+    font-size: 1rem;
+    padding: 10px 15px; /* Adds space around the text */
+    background-color: #004d99; /* Button-like background */
+    border-radius: 5px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Soft shadow */
+    font-weight: 500; /* Slightly bolder text */
+}
 
-        .toc a:hover {
-            color: #ffcc00;
-        }
+/* Hover state with color change and background effect */
+.toc a:hover {
+    color: #004d99; /* Text color change */
+    background-color: #ffcc00; /* Background color on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+    transform: translateY(-3px); /* Slightly lift the link when hovered */
+}
+
 
         /* Style for the Main Content (right side) */
         .main-content {
