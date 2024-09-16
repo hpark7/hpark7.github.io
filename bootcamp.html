@@ -1,1 +1,369 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winter 2025 Boot Camp</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        /* Header*/
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Center the content horizontally */
+            padding: 20px;
+            background-color: white; /* Change background to white */
+            color: #004d99;
+            border-bottom: 1px solid #ddd;
+            position: relative; /* Allow for absolute positioning */
+        }
+
+        .header img {
+            position: absolute;
+            left: 20px; /* Place logo on the left */
+            top: 50%;
+            transform: translateY(-50%);
+            width: 75px; /* Smaller logo */
+            height: auto;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .header .date {
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        /* main container */
+        .container {
+            display: grid;
+            grid-template-columns: 250px 1fr; /* Adjusted TOC width */
+            height: 100vh; /* Full height of the viewport */
+            background-color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        /* Style for the TOC (left side) */
+        .toc {
+            background-color: #fff;
+            padding: 15px;
+            color: #333;
+            overflow-y: auto;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+            border-right: 1px solid #ddd;
+        }
+
+        .toc h2 {
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+            color: #333;
+        }
+
+        /* TOC Links */
+        .toc a {
+            text-decoration: none;
+            color: #2156a5;
+            display: block;
+            margin: 8px 0;
+            font-size: 0.9rem;
+            padding: 8px 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .toc a:hover {
+            color: #004d99;
+            text-decoration: underline;
+        }
+
+        /* Style for the Main Content (right side) */
+        .main-content {
+            padding: 20px;
+            background-color: #fafafa;
+            overflow-y: auto;
+        }
+
+        /* Main Content Typography */
+        h1, h2 {
+            color: #004d99;
+            margin-bottom: 15px;
+        }
+
+        p, ul {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        /* Button styling */
+        .button {
+            display: inline-block;
+            background-color: #ffcc00;
+            color: #004d99;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #ff9900;
+        }
+
+        /* Cover styling */
+        .cover {
+            position: relative;
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+        }
+
+        .cover img.cover-image {
+            width: 100%;
+            height: auto;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .cover-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            color: white;
+            font-size: 2rem;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* Table styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #004d99;
+            color: white;
+            padding: 12px;
+        }
+
+        td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .toc {
+                border-bottom: 1px solid #ddd;
+                border-right: none;
+            }
+        }
+
+        /* Centering elements */
+        .center {
+            text-align: center;
+        }
+
+        .small-logo {
+    width: 100px; /* logo smaller */
+    height: auto;
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section with GGC Logo, Title, and Date -->
+    <div class="header">
+        <img src="SchoolOfScienceAndTechnology-Vert.jpg" alt="GGC Logo"> 
+        <div>
+            <h1>Winter 2025 Boot Camp</h1>
+            <div class="date">Friday, January 3, 2025 - Saturday, January 4, 2025</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Table of Contents Section -->
+        <div class="toc">
+            <h2><i class="fa fa-list-ul"></i> Table of Contents</h2>
+            <a href="#bootcamp1"><i class="fa fa-calendar"></i> Winter 2025 Boot Camp </a>
+        </div>
+
+        <!-- Main Content Section -->
+        <div class="main-content">
+            
+
+            <div class="center">
+                <a class="button" href="https://forms.gle/8YHaB5Diz5PL7Q1j7" target="_blank">
+                    <i class="fa fa-pencil"></i> Apply Here
+                </a>
+            </div>
+
+            <!-- Cover image and text -->
+            <div class="cover">
+                <div class="overlay"></div>
+                <img src="cover3.png" alt="Cover Image" class="cover-image">
+                <div class="cover-text">
+                    <p><strong>EMPOWERING WOMEN</strong></p>
+                    <p><strong>IN TECHNOLOGY</strong></p>
+                </div>
+            </div>
+            <br>
+
+            <p>Women in Technology Java Programming Boot Camp will be held in-person from:<br>
+              Friday, January 3, 2025 - Saturday, January 4, 2025.</p>
+
+            <p><strong>The purpose of this boot camp is to:</strong></p>
+            <ul>
+                <li>Prepare students to succeed in Java Programming courses
+                    <ul>
+                        <li>Group for beginners who have never taken programming</li>
+                        <li>Group for students who have been exposed to Java and want a refresher to prepare for other IT classes</li>
+                    </ul>
+                </li>
+                <li>Enable women in IT to form a community of support with peers, student mentors, and IT faculty</li>
+                <li>Provide professional development opportunities such as guest speakers and off-campus field trips</li>
+            </ul>
+
+            <!-- Schedule table -->
+            <h2 class="center">Tentative Schedule of WIT Winter Boot Camp 2025</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Time</th>
+                        <th>Activity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Friday, January 3, 2025</td>
+                        <td>8:30 - 9:00 AM</td>
+                        <td>Breakfast (TBA)</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>9:00 - 9:30 AM</td>
+                        <td>Pre-Test (TBA)</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>9:30 - 11:30 AM</td>
+                        <td>Programming 1 (TBA) - Dr. Sebastien Siva</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>11:45 AM - 12:15 PM</td>
+                        <td>Guest Speaker (Keynote) (TBA)</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>12:15 - 1:15 PM</td>
+                        <td>Lunch</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>1:30 - 4:00 PM</td>
+                        <td>Programming 2 (TBA) - Dr. Sebastien Siva</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>4:15 - 5:00 PM</td>
+                        <td>Special Topic - Mini Session (TBA)</td>
+                    </tr>
+                    <tr>
+                        <td>Saturday, January 4, 2025</td>
+                        <td>8:30 - 9:00 AM</td>
+                        <td>Breakfast (TBA)</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>9:00 - 11:30 AM</td>
+                        <td>Programming 3 (TBA) - Dr. Sebastien Siva</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>11:35 AM - 1:00 PM</td>
+                        <td>Guest Speakers and Lunch</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>1:15 - 3:30 PM</td>
+                        <td>Programming 4 (TBA) - Dr. Sebastien Siva</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>3:30 - 4:15 PM</td>
+                        <td>Post-Test and Post Survey (TBA)</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>4:30 - 5:00 PM</td>
+                        <td>Closing Session with Certificate Presentation</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>Registration Fee for non-GGC students: <strong>$25.00</strong>. Students who complete the program will receive a certificate and prize. Payment details will be emailed upon acceptance into the program.</p>
+
+            <div class="center">
+                <a class="button" href="https://forms.gle/8YHaB5Diz5PL7Q1j7" target="_blank">
+                    <i class="fa fa-pencil"></i> Apply Here
+                </a>
+            </div>
+
+            <h2 class="center">Thank you to our Sponsors</h2>
+
+            <div class="center">
+                <a href="https://ggcwit.files.wordpress.com/2023/03/cropped-schoolofscienceandtechnology-vert.png" target="_blank">
+                    <img src="https://ggcwit.files.wordpress.com/2023/03/cropped-schoolofscienceandtechnology-vert.png?w=954" alt="School of Science and Technology Logo" class="small-logo" />
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
