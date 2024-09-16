@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,13 +20,13 @@
             color: #333;
         }
 
-        /* Header styling for GGC logo and title */
+        /* Header  */
         .header {
             display: flex;
             align-items: center;
-            justify-content: center; /* Center the content horizontally */
+            justify-content: center;  
             padding: 20px;
-            background-color: white; /* Change background to white */
+            background-color: white; /*  background - white */
             color: #004d99;
             border-bottom: 1px solid #ddd;
             position: relative; /* Allow for absolute positioning */
@@ -164,6 +164,32 @@
             font-weight: bold;
         }
 
+        /* Table styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #004d99;
+            color: white;
+            padding: 12px;
+        }
+
+        td {
+            padding: 12px;
+            text-align: left;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .container {
@@ -186,7 +212,7 @@
 
     <!-- Header Section with GGC Logo, Title, and Date -->
     <div class="header">
-        <img src="SchoolOfScienceAndTechnology-Vert.jpg" alt="GGC Logo"> <!-- Replace with actual logo path -->
+        <img src="SchoolOfScienceAndTechnology-Vert.jpg" alt="GGC Logo"> 
         <div>
             <h1>Winter 2025 Boot Camp</h1>
             <div class="date">Friday, January 3, 2025 - Saturday, January 4, 2025</div>
@@ -198,7 +224,6 @@
         <div class="toc">
             <h2><i class="fa fa-list-ul"></i> Table of Contents</h2>
             <a href="#bootcamp1"><i class="fa fa-calendar"></i> Winter 2025 Boot Camp </a>
-            <!-- Add more TOC links if needed -->
         </div>
 
         <!-- Main Content Section -->
@@ -212,7 +237,101 @@
                 </a>
             </div>
 
-            <!-- Your other content such as project details, schedule, etc., goes here -->
+            <!-- Schedule table -->
+            <h2 class="center">Tentative Schedule of WIT Winter Boot Camp 2025</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Time</th>
+                        <th>Activity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Friday, January 3, 2025</td>
+                        <td>8:30 - 9:00 AM</td>
+                        <td>Breakfast (TBA)</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>9:00 - 9:30 AM</td>
+                        <td>Pre-Test (TBA)</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>9:30 - 11:30 AM</td>
+                        <td>Programming 1 (TBA) - Dr. Sebastien Siva</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>11:45 AM - 12:15 PM</td>
+                        <td>Guest Speaker (Keynote) (TBA)</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>12:15 - 1:15 PM</td>
+                        <td>Lunch</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>1:30 - 4:00 PM</td>
+                        <td>Programming 2 (TBA) - Dr. Sebastien Siva</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>4:15 - 5:00 PM</td>
+                        <td>Special Topic - Mini Session (TBA)</td>
+                    </tr>
+                    <tr>
+                        <td>Saturday, January 4, 2025</td>
+                        <td>8:30 - 9:00 AM</td>
+                        <td>Breakfast (TBA)</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>9:00 - 11:30 AM</td>
+                        <td>Programming 3 (TBA) - Dr. Sebastien Siva</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>11:35 AM - 1:00 PM</td>
+                        <td>Guest Speakers and Lunch</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>1:15 - 3:30 PM</td>
+                        <td>Programming 4 (TBA) - Dr. Sebastien Siva</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>3:30 - 4:15 PM</td>
+                        <td>Post-Test and Post Survey (TBA)</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>4:30 - 5:00 PM</td>
+                        <td>Closing Session with Certificate Presentation</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>Registration Fee for non-GGC students: <strong>$25.00</strong>. Students who complete the program will receive a certificate and prize. Payment details will be emailed upon acceptance into the program.</p>
+
+            <div class="center">
+                <a class="button" href="https://forms.gle/8YHaB5Diz5PL7Q1j7" target="_blank">
+                    <i class="fa fa-pencil"></i> Apply Here
+                </a>
+            </div>
+
+            <h2 class="center">Thank you to our Sponsors</h2>
+
+            <div class="center">
+                <a href="https://ggcwit.files.wordpress.com/2023/03/cropped-schoolofscienceandtechnology-vert.png" target="_blank">
+                    <img src="https://ggcwit.files.wordpress.com/2023/03/cropped-schoolofscienceandtechnology-vert.png?w=954" alt="School of Science and Technology Logo" class="small-logo" />
+                </a>
+            </div>
+
         </div>
     </div>
 
