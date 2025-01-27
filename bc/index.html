@@ -1,81 +1,129 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boot Camp</title>
+    <title>Boot Camp Table of Contents</title>
+    <link rel="stylesheet" href="styles.css"> <!-- External CSS -->
     <style>
-        /* Add your CSS here */
-        .container {
-            display: grid;
-            grid-template-columns: 250px 1fr;
-            gap: 10px;
-            height: 100vh;
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            color: #333;
         }
 
-        .toc {
-            background: #f0f0f0;
+        /* Header */
+        .header {
+            text-align: center;
             padding: 20px;
-            border-right: 1px solid #ddd;
-        }
-
-        .main-content {
-            padding: 20px;
-            overflow-y: auto;
-        }
-
-        .toc a {
-            display: block;
-            margin: 10px 0;
+            background-color: white;
             color: #004d99;
-            text-decoration: none;
-            cursor: pointer;
+            border-bottom: 2px solid #ddd;
         }
 
-        .toc a:hover {
+        .header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+        }
+
+        /* Main container */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* TOC Card */
+        .toc-card {
+            background-color: #fff;
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .toc-card:hover {
+            transform: scale(1.02);
+        }
+
+        .toc-header {
+            background-color: #004d99;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .toc-content {
+            padding: 20px;
+        }
+
+        .toc-content a {
+            text-decoration: none;
+            color: #2156a5;
+            font-size: 1rem;
+            display: block;
+            margin-bottom: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .toc-content a:hover {
+            color: #004d99;
             text-decoration: underline;
         }
-    </style>
-    <script>
-        // Function to load dynamic content
-        function loadContent(url) {
-            fetch(url)
-                .then(response => response.text())
-                .then(data => {
-                    document.querySelector('.main-content').innerHTML = data;
-                })
-                .catch(error => {
-                    document.querySelector('.main-content').innerHTML = '<p>Error loading content. Please try again later.</p>';
-                });
-        }
 
-        // Event listener for loading content
-        document.addEventListener('DOMContentLoaded', () => {
-            const links = document.querySelectorAll('.toc a');
-            links.forEach(link => {
-                link.addEventListener('click', event => {
-                    event.preventDefault();
-                    const url = link.getAttribute('data-content-url');
-                    loadContent(url);
-                });
-            });
-        });
-    </script>
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #004d99;
+            color: white;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
+
+    <!-- Header -->
+    <header class="header">
+        <h1>Programming Boot Camps</h1>
+        <p>Select a Boot Camp to view more details</p>
+    </header>
+
+    <!-- Main Content -->
     <div class="container">
-        <!-- Table of Contents -->
-        <div class="toc">
-            <h2>Table of Contents</h2>
-            <a href="#may-2025" data-content-url="content-may-2025.html">May 2025 Boot Camp</a>
-            <a href="#january-2025" data-content-url="content-january-2025.html">January 2025 Boot Camp</a>
+
+        <!-- TOC Card for May 2025 -->
+        <div class="toc-card">
+            <div class="toc-header">May 2025 Boot Camp</div>
+            <div class="toc-content">
+                <a href="content-may-2025.html">View Details</a>
+            </div>
         </div>
 
-        <!-- Main Content Area -->
-        <div class="main-content">
-            <p>Welcome! Click a link from the Table of Contents to see the details.</p>
+        <!-- TOC Card for January 2025 -->
+        <div class="toc-card">
+            <div class="toc-header">January 2025 Boot Camp</div>
+            <div class="toc-content">
+                <a href="content-january-2025.html">View Details</a>
+            </div>
         </div>
+
     </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        © 2025 Programming Boot Camps - All Rights Reserved
+    </footer>
+
 </body>
 </html>
