@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>May 2025 Boot Camp</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background-color: white;
+            color: #004d99;
+            border-bottom: 1px solid #ddd;
+            position: relative;
+        }
+
+        .header img {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 75px;
+            height: auto;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .header .date {
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        /* Main container */
+        .container {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            height: 100vh;
+            background-color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        /* Style for the TOC (left side) */
+        .toc {
+            background-color: #fff;
+            padding: 15px;
+            color: #333;
+            overflow-y: auto;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+            border-right: 1px solid #ddd;
+        }
+
+        .toc h2 {
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+            color: #333;
+        }
+
+        /* TOC Links */
+        .toc a {
+            text-decoration: none;
+            color: #2156a5;
+            display: block;
+            margin: 8px 0;
+            font-size: 0.9rem;
+            padding: 8px 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .toc a:hover {
+            color: #004d99;
+            text-decoration: underline;
+        }
+
+        /* Style for the Main Content (right side) */
+        .main-content {
+            padding: 20px;
+            background-color: #fafafa;
+            overflow-y: auto;
+        }
+
+        /* Main Content Typography */
+        h1, h2 {
+            color: #004d99;
+            margin-bottom: 15px;
+        }
+
+        p, ul {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        /* Button styling */
+        .button {
+            display: inline-block;
+            background-color: #ffcc00;
+            color: #004d99;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #ff9900;
+        }
+
+        /* Cover styling */
+        .cover {
+            position: relative;
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+        }
+
+        .cover img.cover-image {
+            width: 100%;
+            height: auto;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .cover-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            color: white;
+            font-size: 2rem;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* Table styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #004d99;
+            color: white;
+            padding: 12px;
+        }
+
+        td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .toc {
+                border-bottom: 1px solid #ddd;
+                border-right: none;
+            }
+        }
+
+        /* Centering elements */
+        .center {
+            text-align: center;
+        }
+
+        .small-logo {
+            width: 100px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <img src="/bc/images/SchoolOfScienceAndTechnology-Vert.jpg" alt="GGC Logo">
+        <div>
+            <h1>May 2025 Boot Camp</h1>
+            <div class="date">Wednesday, May 7, 2025 - Friday, May 9, 2025</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Table of Contents -->
+        <div class="toc">
+            <h2><i class="fa fa-list-ul"></i> Table of Contents</h2>
+            <a href="#bootcamp1"><i class="fa fa-calendar"></i> May 2025 Boot Camp</a>
+        </div>
+
+        <!-- Main Content Section -->
+        <div class="main-content">
+            <div class="center">
+                <a class="button" href="https://tinyurl.com" target="_blank">
+                    <i class="fa fa-pencil"></i> Application/Registration
+                </a>
+            </div>
+
+            <!-- Cover -->
+            <div class="cover">
+                <div class="overlay"></div>
+                <img src="https://github.com/hpark7/hpark7.github.io/blob/master/bc/images/cover052025.png?raw=true" alt="Cover Image
+::contentReference[oaicite:0]{index=0}
+ 
