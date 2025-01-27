@@ -3,127 +3,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boot Camp Table of Contents</title>
-    <link rel="stylesheet" href="styles.css"> <!-- External CSS -->
+    <title>Boot Camp 2025</title>
     <style>
+        /* Reset and Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
             font-family: 'Arial', sans-serif;
             background-color: #f5f5f5;
-            margin: 0;
             color: #333;
         }
-
-        /* Header */
         .header {
-            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             padding: 20px;
             background-color: white;
             color: #004d99;
-            border-bottom: 2px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            position: relative;
         }
-
+        .header img {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 75px;
+            height: auto;
+        }
         .header h1 {
-            margin: 0;
             font-size: 2rem;
+            text-align: center;
         }
-
-        .header p {
-            font-size: 1.1rem;
+        .header .date {
+            font-size: 1rem;
+            margin-top: 10px;
         }
-
-        /* Main container */
         .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
-
-        /* TOC Card */
-        .toc-card {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            height: 100vh;
             background-color: #fff;
-            width: 100%;
-            max-width: 600px;
-            margin-bottom: 20px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
             overflow: hidden;
-            transition: transform 0.3s;
         }
-
-        .toc-card:hover {
-            transform: scale(1.02);
+        .toc {
+            background-color: #fff;
+            padding: 15px;
+            color: #333;
+            overflow-y: auto;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+            border-right: 1px solid #ddd;
         }
-
-        .toc-header {
-            background-color: #004d99;
-            color: white;
-            padding: 10px 20px;
-            font-size: 1.2rem;
-            font-weight: bold;
+        .toc h2 {
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+            color: #333;
         }
-
-        .toc-content {
-            padding: 20px;
-        }
-
-        .toc-content a {
+        .toc a {
             text-decoration: none;
             color: #2156a5;
-            font-size: 1rem;
             display: block;
-            margin-bottom: 10px;
-            transition: color 0.3s ease;
+            margin: 8px 0;
+            font-size: 0.9rem;
+            padding: 8px 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
         }
-
-        .toc-content a:hover {
+        .toc a:hover {
             color: #004d99;
             text-decoration: underline;
         }
-
-        /* Footer */
-        .footer {
+        .main-content {
+            padding: 20px;
+            background-color: #fafafa;
+            overflow-y: auto;
+        }
+        h1, h2 {
+            color: #004d99;
+            margin-bottom: 15px;
+        }
+        p, ul {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        .center {
             text-align: center;
-            padding: 10px;
+        }
+        .button {
+            display: inline-block;
+            background-color: #ffcc00;
+            color: #004d99;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #ff9900;
+        }
+        .content-section {
+            display: none;
+        }
+        .content-section.active {
+            display: block;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        th {
             background-color: #004d99;
             color: white;
-            font-size: 0.9rem;
+            padding: 12px;
+        }
+        td {
+            padding: 12px;
+            text-align: left;
         }
     </style>
 </head>
 <body>
-
     <!-- Header -->
-    <header class="header">
-        <h1>Programming Boot Camps</h1>
-        <p>Select a Boot Camp to view more details</p>
-    </header>
-
-    <!-- Main Content -->
-    <div class="container">
-
-        <!-- TOC Card for May 2025 -->
-        <div class="toc-card">
-            <div class="toc-header">May 2025 Boot Camp</div>
-            <div class="toc-content">
-                <a href="content-may-2025.html">View Details</a>
-            </div>
+    <div class="header">
+        <img src="/bc/images/SchoolOfScienceAndTechnology-Vert.jpg" alt="GGC Logo"> 
+        <div>
+            <h1>Boot Camp 2025</h1>
+            <div class="date">Explore January and May Boot Camps</div>
         </div>
-
-        <!-- TOC Card for January 2025 -->
-        <div class="toc-card">
-            <div class="toc-header">January 2025 Boot Camp</div>
-            <div class="toc-content">
-                <a href="content-january-2025.html">View Details</a>
-            </div>
-        </div>
-
     </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        © 2025 Programming Boot Camps - All Rights Reserved
-    </footer>
+    <div class="container">
+        <!-- Table of Contents -->
+        <div class="toc">
+            <h2>Table of Contents</h2>
+            <a href="#" onclick="showSection('january')">January 2025 Boot Camp</a>
+            <a href="#" onclick="showSection('may')">May 2025 Boot Camp</a>
+        </div>
 
+        <!-- Main Content Section -->
+        <div class="main-content">
+            <!-- January Section -->
+            <div id="january" class="content-section">
+                <h1>January 2025 Boot Camp</h1>
+                <p>The January Boot Camp will provide students with foundational programming skills.</p>
+                <ul>
+                    <li>Programming Basics: Learn fundamental programming concepts like variables, loops, and conditionals.</li>
+                    <li>Workshops: Participate in coding challenges to solve real-world problems.</li>
+                    <li>Career Opportunities: Network with guest speakers from top tech companies.</li>
+                </ul>
+                <h2>Tentative Schedule</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Time</th>
+                            <th>Activity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Monday</td>
+                            <td>9:00 AM</td>
+                            <td>Introduction & Orientation</td>
+                        </tr>
+                        <tr>
+                            <td>Tuesday</td>
+                            <td>10:00 AM</td>
+                            <td>Python Basics Workshop</td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>1:00 PM</td>
+                            <td>Team Coding Challenge</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="center">
+                    <a class="button" href="https://example.com/january-registration" target="_blank">Register for January Boot Camp</a>
+                </div>
+            </div>
+
+            <!-- May Section -->
+            <div id="may" class="content-section active">
+                <h1>May 2025 Boot Camp</h1>
+                <p>Programming Boot Camp will be held in-person from Wednesday, May 7, 2025 - Friday, May 9, 2025.</p>
+                <ul>
+                    <li>Programming 1: Interactive lessons for both beginners and advanced students.</li>
+                    <li>Networking Opportunities: Connect with alumni and professionals in the IT field.</li>
+                    <li>Professional Development: Participate in resume-building sessions and mock interviews.</li>
+                </ul>
+                <h2>Tentative Schedule</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Time</th>
+                            <th>Activity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>9:00 AM</td>
+                            <td>Guest Speaker Session</td>
+                        </tr>
+                        <tr>
+                            <td>Thursday</td>
+                            <td>10:00 AM</td>
+                            <td>Advanced Programming Concepts</td>
+                        </tr>
+                        <tr>
+                            <td>Friday</td>
+                            <td>2:00 PM</td>
+                            <td>Closing Ceremony</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="center">
+                    <a class="button" href="https://example.com/may-registration" target="_blank">Register for May Boot Camp</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
 </body>
 </html>
