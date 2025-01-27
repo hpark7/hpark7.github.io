@@ -185,12 +185,14 @@
     <p>Programming Boot Camp will be held in-person from Friday, January 3, 2025 - Saturday, January 4, 2025.</p>
   
     <img src="/bc/images/cover3.png" alt="Boot Camp - Jan Cover Image" style="display: block; margin: 20px auto; max-width: 100%; height: auto;">
+ <!--
     <div class="center">
         <a class="button" href="https://forms.gle/8YHaB5Diz5PL7Q1j7" target="_blank">
             <i class="fa fa-pencil"></i> Application/Registration-Closed
         </a>
     </div>
-
+   -->
+    
     <p>Registration for non-GGC students includes a $25 fee. Fee waivers may be available for eligible non-GGC students based on academic merit (GPA of 3.3 or higher).</p>
 
     <h2>Purpose</h2>
@@ -279,12 +281,13 @@
         </tbody>
     </table>
 
+     <!--
     <div class="center">
         <a class="button" href="https://forms.gle/8YHaB5Diz5PL7Q1j7" target="_blank">
             <i class="fa fa-pencil"></i> Application/Registration-Closed
         </a>
     </div>
-
+-->
       <div class="center">
             <p class="supporter-text">Thanks To Our Supporters</p>
             <a href="https://www.google.com/" target="_blank">
@@ -452,6 +455,16 @@
 </div>
 
     <script>
+
+        window.onload = function () {
+                // may site - default
+                showSection('may');
+            
+                const maySection = document.getElementById('may');
+                maySection.scrollIntoView({ behavior: 'smooth' });
+            };
+
+        
         function showSection(sectionId) {
             const sections = document.querySelectorAll('.content-section');
             sections.forEach(section => {
